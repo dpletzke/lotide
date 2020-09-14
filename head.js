@@ -4,9 +4,9 @@ const assertEqual = function(actual, expected) {
   console.log(output);
 };
 
-const head = function(arr){
+const head = function(arr) {
   return arr[0];
-}
+};
 
 assertEqual(head([]), undefined);
 assertEqual(head([5,6,7]), 5);
