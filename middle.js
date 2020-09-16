@@ -19,7 +19,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 let middleIndexes = function(arr) {
   if (arr.length < 3) {
-    return undefined;
+    return null;
   } else if (arr.length % 2 === 0) {
     let midStartIndex = arr.length / 2;
     let midEndIndex = midStartIndex + 1;
