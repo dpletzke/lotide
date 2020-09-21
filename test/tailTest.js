@@ -1,11 +1,17 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const { assert, expect } = require('chai');
 
-assertEqual(tail([]), undefined);
-assertEqual(JSON.stringify(tail([5,6,7])), JSON.stringify([6,7]));
-assertEqual(JSON.stringify(tail(["Hello", "Lighthouse", "Labs"])), JSON.stringify(["Lighthouse", "Labs"]));
+describe('#tail', () => {
+  it('should return \'Labs\' when passed ["Yo Yo", "Lighthouse", "Labs"]', () => {
+    const arr = ["Yo Yo", "Lighthouse", "Labs"];
+    expect(tail(arr)).to.match(/Labs/);
+  });
+  it('should not mutate the array when passed ["Yo Yo", "Lighthouse", "Labs"]', () => { 
+    const arr = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(arr);
+    assert.deepEqual(arr, ["Yo Yo", "Lighthouse", "Labs"], "arrays should be equal");
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  });
+});
+
+
