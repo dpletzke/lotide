@@ -8,7 +8,7 @@ const findKey = (obj, check) => {
   return null;
 } 
 
-
+module.exports = findKey;
 
 // const obj = {
 //   "Blue Hill": { stars: 1 },
