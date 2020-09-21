@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@dpletzke/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "mini-recreation of lodash, for learning purposes",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/dpletzke/lotide.git"
   },
-  "author": "",
+  "author": "Daniel Pletzke <dpletzke@gmail.com> (github.com/dpletzke)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dpletzke/lotide/issues"
