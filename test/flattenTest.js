@@ -9,6 +9,6 @@ describe('#flatten', () => {
   });
   it('should return all of the same elements that were in the passed array', () => {
     const arr = [2,3,5,6,7,12,0];
-    expect(flatten(arr)).to.have.members(arr);
+    expect(flatten(arr)).is.an('array').that.has.members(arr);
   });
 });
