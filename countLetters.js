@@ -16,7 +16,9 @@ let countLetters = function(str) {
   return results;
 };
 
-console.log(countLetters('abba'));
-console.log(countLetters('rodeo'));
+module.exports = countLetters;
+
+// console.log(countLetters('abba'));
+// console.log(countLetters('rodeo'));
 // assertEqual(countLetters('abba'), {a: 2, b: 2});
 // assertEqual(countLetters('rodeo'), {a: 2, b: 2});

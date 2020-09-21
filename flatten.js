@@ -11,8 +11,10 @@ const flatten = function(arr) {
   }
   return output;
 }
+
+module.exports = flatten;
+
 // const arr = [1,2,3,4,[[[[9]]]]];
 // const noMemberArrays = arr => arr.every(e => !Array.isArray(e));
 // console.log(flatten(arr), noMemberArrays(flatten(arr)));
 
-module.exports = flatten;
