@@ -1,7 +1,7 @@
 const flatten = function(arr) {
-  arrCopy = [...arr];
+  const arrCopy = [...arr];
   let output = [];
-  for (e of arrCopy) {
+  for (const e of arrCopy) {
     if (Array.isArray(e)) {
       output.push(...flatten(e));
     } else {

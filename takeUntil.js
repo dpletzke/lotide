@@ -1,19 +1,6 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
 const takeUntil = (arr, takeUntilTrue) => {
   const output = [];
-  for (e of arr) {
+  for (const e of arr) {
     if (!takeUntilTrue(e)) {
       output.push(e);
     } else {

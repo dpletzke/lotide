@@ -1,5 +1,5 @@
 const findKeyByValue = function(obj, value) {
-  for (prop in obj) {
+  for (const prop in obj) {
     if (obj[prop] === value) {
       return prop;
     }

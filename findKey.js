@@ -1,6 +1,6 @@
 
 const findKey = (obj, check) => {
-  for (key in obj) {
+  for (const key in obj) {
     if (check(obj[key])) {
       return key;
     }
