@@ -1,5 +1,5 @@
 
-//count when, keys with truthy value, 
+//count when, keys with truthy value,
 // don't count when, set to false, or not in object, or not in string
 
 
@@ -9,18 +9,17 @@ const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
   for (const item of allItems) {
-    if(itemsToCount[item]){
-      if(!results[item]) {
+    if (itemsToCount[item]) {
+      if (!results[item]) {
         results[item] = 1;
-      }
-      else {
+      } else {
         results[item]++;
       }
     }
   }
   console.log(results);
   return results;
-}
+};
 module.exports = countOnly;
 
 

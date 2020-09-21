@@ -12,7 +12,7 @@ const eqObjects = function(object1, object2) {
         return false;
       }
       /* */
-    } else if (typeof object1[prop] === 'object' && object1[prop] !== null ) {
+    } else if (typeof object1[prop] === 'object' && object1[prop] !== null) {
       return eqObjects(object1[prop], object2[prop]);
 
     } else if (object1[prop] !== object2[prop]) {

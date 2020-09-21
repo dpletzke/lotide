@@ -1,16 +1,15 @@
 const flatten = function(arr) {
   arrCopy = [...arr];
   let output = [];
-  for(e of arrCopy) {
-    if(Array.isArray(e)) {
+  for (e of arrCopy) {
+    if (Array.isArray(e)) {
       output.push(...flatten(e));
-    }
-    else {
+    } else {
       output.push(e);
-    } 
+    }
   }
   return output;
-}
+};
 
 module.exports = flatten;
 

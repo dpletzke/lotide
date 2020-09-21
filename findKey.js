@@ -1,12 +1,12 @@
 
 const findKey = (obj, check) => {
   for (key in obj) {
-    if(check(obj[key])) {
+    if (check(obj[key])) {
       return key;
     }
   }
   return null;
-} 
+};
 
 module.exports = findKey;
 
