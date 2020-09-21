@@ -1,4 +1,4 @@
-node mlet middleIndexes = function(arr) {
+let middleIndexes = function(arr) {
   if (arr.length < 3) {
     return null;
   } else if (arr.length % 2 === 0) {
