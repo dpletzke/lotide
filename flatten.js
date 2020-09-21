@@ -1,37 +1,18 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for(let i = 0; i < arr1.length; i++) {
-    if(arr)
-    if(arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-} 
-
-
-const assertArraysEqual = function(arr1, arr2) {
-  let checkEqual = eqArrays(arr1, arr2);
-  let output = checkEqual ? `✅ Assertion Passed: ${JSON.stringify(arr1)} === ${JSON.stringify(arr2)}` : `🛑 Assertion Failed: ${JSON.stringify(arr1)} !== ${JSON.stringify(arr2)}`;
-  console.log(output);
-}
-
 const flatten = function(arr) {
-  arr = [...arr];
+  arrCopy = [...arr];
   let output = [];
-  for(let i = 0; i < arr.length; i++) {
-    if(arr[i])) {
-      for(let j = 0; j < arr[i].length; j++) {
-        output.push(arr[i][j]);
-      }
+  for(e of arrCopy) {
+    if(Array.isArray(e)) {
+      output.push(...flatten(e));
     }
     else {
-      output.push(arr[i]);
-    }
+      output.push(e);
+    } 
   }
   return output;
 }
+// const arr = [1,2,3,4,[[[[9]]]]];
+// const noMemberArrays = arr => arr.every(e => !Array.isArray(e));
+// console.log(flatten(arr), noMemberArrays(flatten(arr)));
 
-console.log(flatten([1,2,6,7,8,[9]]));
+module.exports = flatten;
